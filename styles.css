@@ -8,7 +8,7 @@ body {
 header {
     background-color: #3072c2;
     color: rgb(249,247,232);
-    padding: 103px 0;
+    padding: 49px 0;
     display: flex; /* Enable flexbox layout */
     align-items: center; /* Align items vertically in the center */
     justify-content: center; /* Center content horizontally */
@@ -20,10 +20,10 @@ div header {
     display: flex; /* Enable flexbox layout */
     align-items: center; /* Align items vertically in the center */
     justify-content: center; /* Center content horizontally */
-    gap: 80px; /* Space between the image and the text */
+    gap: 50px; /* Space between the image and the text */
 }
 .header-image {
-    width: 200px; /* Adjust width */
+    width: 100px; /* Adjust width */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensures the image fits within the box */
 }
