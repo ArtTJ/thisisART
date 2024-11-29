@@ -1,0 +1,194 @@
+body {
+    font-family: OpenDyslexic;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color:rgb(249,247,232);
+}
+header {
+    background-color: #3072c2;
+    color: rgb(249,247,232);
+    padding: 103px 0;
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Center content horizontally */
+}
+div header {
+    background-color: #3072c2;
+    color: rgb(249,247,232);
+    padding: 20px 0;
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Center content horizontally */
+    gap: 80px; /* Space between the image and the text */
+}
+.header-image {
+    width: 200px; /* Adjust width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image fits within the box */
+}
+.header-title {
+    margin: 0;
+    font-size: 2.5em;
+    line-height: 1.2; /* Adjusts spacing for better alignment */
+    position: relative;
+    top: 0px; /* Moves the title higher */
+}
+.bio {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+.bio h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+.bio p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #000000;
+}
+.text {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+.text h2 {
+    font-size: 1.8em;
+    margin: 10px;
+
+}
+.text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #000000;
+}
+main {
+    margin: 10px;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
+    gap: 25px; /* Space between the cards */
+}   
+.project-card {
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s, box-shadow 0.4s;
+    display: flex; /* Use flexbox to align content */
+    flex-direction: column; /* Stack image and button vertically */
+    align-items: stretch; /* Center content horizontally */
+    justify-content: flex-start; /* Align content to the top */
+    height: 250px; /* Set a fixed height for the card */
+    width: 250px;
+    box-sizing: border-box; /* Ensure padding doesn’t affect width/height */
+}
+.project-card img {
+    max-width: 250px;
+    max-height: 182px;
+    display: block; /* Ensures the image behaves predictably inside the link */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the box */
+    margin: auto; /* Add spacing around the image */
+    display: block; /* Prevent inline spacing issues */
+    flex-grow: 1;
+}
+.project-card a {
+    display: flex; /* Flexbox to align children */
+    flex-direction: column; /* Stack image and button vertically */
+    align-items: stretch; /* Ensure children span full width */
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit text color */
+    height: 100%; /* Let the link span the entire card */
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.project-button {
+    margin: 0;
+    padding: 10px;
+    background-color: #3072c2;
+    color: white;
+    border-radius: 0 0 15px 15px; /* Rounded corners only at the bottom */
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center; /* Center text horizontally */
+    width: 100%; /* Make the button span the card's width */
+    display: flex; /* Use flexbox to center the text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    transition: background-color 0.4s;
+    box-sizing: border-box; /* Ensure padding doesn’t affect width */
+}
+.project-button:hover {
+    background-color: #0056b3;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
+    gap: 25px; /* Space between the cards */
+}   
+.project-card {
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s, box-shadow 0.4s;
+    display: flex; /* Use flexbox to align content */
+    flex-direction: column; /* Stack image and button vertically */
+    align-items: stretch; /* Center content horizontally */
+    justify-content: flex-start; /* Align content to the top */
+    height: 200px; /* Set a fixed height for the card */
+    width: 200px;
+    box-sizing: border-box; /* Ensure padding doesn’t affect width/height */
+}
+.project-card img {
+    max-width: 150px;
+    max-height: 132px;
+    display: block; /* Ensures the image behaves predictably inside the link */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the box */
+    margin: auto; /* Add spacing around the image */
+    display: block; /* Prevent inline spacing issues */
+    flex-grow: 1;
+}
+.project-card a {
+    display: flex; /* Flexbox to align children */
+    flex-direction: column; /* Stack image and button vertically */
+    align-items: stretch; /* Ensure children span full width */
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit text color */
+    height: 100%; /* Let the link span the entire card */
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.project-button {
+    margin: 0;
+    padding: 10px;
+    background-color: #3072c2;
+    color: white;
+    border-radius: 0 0 15px 15px; /* Rounded corners only at the bottom */
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center; /* Center text horizontally */
+    width: 100%; /* Make the button span the card's width */
+    display: flex; /* Use flexbox to center the text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    transition: background-color 0.4s;
+    box-sizing: border-box; /* Ensure padding doesn’t affect width */
+}
+.project-button:hover {
+    background-color: #0056b3;
+}
