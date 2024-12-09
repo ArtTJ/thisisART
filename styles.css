@@ -17,7 +17,8 @@ header {
 div header {
     background-color: #3072c2;
     color: rgb(249,247,232);
-    padding: 20px 0;
+    padding: 20px 10px;
+    padding-top: 0px;
     display: flex; /* Enable flexbox layout */
     flex-direction: row;
     align-items: center; /* Align items vertically in the center */
