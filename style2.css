@@ -1,0 +1,175 @@
+/* =========================
+   Mechatronics Portfolio – style.css
+   ========================= */
+
+/* Theme tokens */
+:root {
+  --bg: #ffffff;
+  --fg: #0f172a;
+  --muted: #475569;
+  --card: #f8fafc;
+  --accent: #2563eb;
+  --ring: rgba(37, 99, 235, .35);
+  --radius: 14px;
+  --maxw: 1080px;
+}
+
+/* Dark theme (auto) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1020;
+    --fg: #e6eaf2;
+    --muted: #9aa3b2;
+    --card: #0f152a;
+    --accent: #6ea8ff;
+    --ring: rgba(110, 168, 255, .4);
+  }
+}
+
+/* Base & reset */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+img, svg, video { max-width: 100%; height: auto; display: block; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Layout */
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 18px 20px; }
+main { max-width: var(--maxw); margin: 0 auto; padding: 28px 20px 80px; }
+
+/* Header / Nav */
+header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: saturate(160%) blur(8px);
+  background: color-mix(in oklab, var(--bg), transparent 10%);
+  border-bottom: 1px solid color-mix(in oklab, var(--muted), transparent 80%);
+  z-index: 50;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+}
+.brand { font-weight: 700; letter-spacing: .2px; }
+.navlinks { display: flex; gap: 14px; flex-wrap: wrap; }
+.chip {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--card), transparent 15%);
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1.3fr .7fr;
+  align-items: center;
+}
+.hero h1 {
+  font-size: clamp(28px, 3.6vw, 44px);
+  line-height: 1.15;
+  margin: 0;
+}
+.hero p { color: var(--muted); margin: 6px 0 0; }
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 10px color-mix(in oklab, var(--accent), transparent 75%);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.cta:hover { transform: translateY(-1px); box-shadow: 0 8px 18px color-mix(in oklab, var(--accent), transparent 70%); }
+
+/* Sections */
+.section { margin-top: 48px; }
+.section h2 { font-size: 22px; margin: 0 0 8px; }
+.muted { color: var(--muted); }
+
+/* Grids & Cards */
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  margin-top: 18px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid color-mix(in oklab, var(--muted), transparent 80%);
+  border-radius: var(--radius);
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px color-mix(in oklab, black, transparent 85%);
+}
+.thumb {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: 10px;
+  background:
+    linear-gradient(135deg,
+      color-mix(in oklab, var(--accent), transparent 80%),
+      transparent 85%);
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* Tags */
+.tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.tag {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px dashed color-mix(in oklab, var(--muted), transparent 50%);
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid color-mix(in oklab, var(--muted), transparent 80%);
+}
+
+/* Accessibility helpers */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; border: 0; padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Responsiveness */
+@media (max-width: 800px) {
+  .hero { grid-template-columns: 1fr; }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
